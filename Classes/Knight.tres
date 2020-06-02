@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ClassStats.cs" type="Script" id=1]
+[ext_resource path="res://Assets/Knight.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Type = "Knight"
+Health = 80
+Strength = 90
+Intelligence = 30
+Profile = ExtResource( 2 )
