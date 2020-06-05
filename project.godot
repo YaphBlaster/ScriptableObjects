@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ScriptableObjects"
-run/main_scene="res://Scenes/ClassDisplay.tscn"
+run/main_scene="res://Scenes/ClassSelectionMenu.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -1,13 +1,16 @@
 using Godot;
 using System;
 
-public class ClassDisplay : ColorRect
+public class ClassDisplay : Panel
 {
     // Declare member variables here. Examples:
     // private int a = 2;
     // private string b = "text";
 
-    ClassStats LoadedClassStats;
+    ClassStats KnightClass;
+    ClassStats WizardClass;
+    ClassStats ThiefClass;
+
     TextureRect Profile;
     Label ClassData;
     Label HealthData;
@@ -18,8 +21,10 @@ public class ClassDisplay : ColorRect
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        LoadedClassStats = (ClassStats)GD.Load("res://Classes/Thief.tres"); // resource is loaded when line is executed
-        UpdateClassDisplay(LoadedClassStats);
+        KnightClass = (ClassStats)GD.Load("res://Classes/Knight.tres"); // resource is loaded when line is executed
+        WizardClass = (ClassStats)GD.Load("res://Classes/Wizard.tres"); // resource is loaded when line is executed
+        ThiefClass = (ClassStats)GD.Load("res://Classes/Thief.tres"); // resource is loaded when line is executed
+        UpdateClassDisplay(KnightClass);
     }
 
     public void UpdateClassDisplay(ClassStats classStats)
@@ -42,4 +47,20 @@ public class ClassDisplay : ColorRect
     //  {
     //      
     //  }
+
+    public void _on_KnightButton_pressed()
+    {
+        UpdateClassDisplay(KnightClass);
+    }
+
+    public void _on_WizardButton_pressed()
+    {
+        UpdateClassDisplay(WizardClass);
+
+    }
+
+    public void _on_ThiefButton_pressed()
+    {
+        UpdateClassDisplay(ThiefClass);
+    }
 }
